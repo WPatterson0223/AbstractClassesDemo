@@ -39,13 +39,14 @@ namespace ConsoleUI
              * Set the properties with object initializer syntax
              */
             List<Vehicle> vehicles = new List<Vehicle>();
+
             Car car1 = new Car()
             {
                 Year = 1965,
                 Make = "Ford",
                 Model = "Mustang",
                 HasTrunk = true,
-                Has4WheelDrive = false
+                
             };
             Motorcycle motorcycle1 = new Motorcycle()
             {
@@ -53,7 +54,7 @@ namespace ConsoleUI
                 Make = "Harley",
                 Model = "Sportster",
                 HasSideCar = false,
-                HasWindShield = true
+                
             };
             Vehicle car2 = new Car()
             {
@@ -61,7 +62,7 @@ namespace ConsoleUI
                 Make = "Lincoln",
                 Model = "Mark VIII",
                 HasTrunk = true,
-                Has4WheelDrive = false
+                
             };
             Vehicle motorcycle2 = new Motorcycle()
             {
@@ -69,7 +70,7 @@ namespace ConsoleUI
                 Make = "Harley",
                 Model = "Fat Boy",
                 HasSideCar = false,
-                HasWindShield = false
+                
             };
             vehicles.Add(car1);
             vehicles.Add(car2);
@@ -82,13 +83,13 @@ namespace ConsoleUI
             foreach (Vehicle item in vehicles)
             {
                 Console.WriteLine($"{item.Year} {item.Make}, {item.Model}");
+                item.DriveAbstract();
+                item.DriveVirtual();
+                Console.WriteLine();
             }
 
             // Call each of the drive methods for one car and one motorcycle
-            car1.DriveAbstract(car1);
-            car1.DriveVirtual(car1);
-            motorcycle1.DriveAbstract(motorcycle1);
-            motorcycle1.DriveVirtual(motorcycle1);
+            
             #endregion            
             Console.ReadLine();
         }

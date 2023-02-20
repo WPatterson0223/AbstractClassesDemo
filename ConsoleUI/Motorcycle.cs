@@ -9,16 +9,16 @@ namespace ConsoleUI
 		{
 		}
 		public bool HasSideCar { get; set; }
-		public bool HasWindShield { get; set; }
+		
 
-        public override void DriveAbstract(Vehicle moto)
+        public override void DriveAbstract()
         {
-            Console.WriteLine($"My car is a {moto.Year} {moto.Make}, {moto.Model}");
+            Console.WriteLine($"Abstract: Motorcycle");
             Console.WriteLine();
         }
-        public override void DriveVirtual(Vehicle moto)
+        public override void DriveVirtual()
         {
-            Console.WriteLine($"Virtual: My car is a {moto.Year} {moto.Make}, {moto.Model}");
+            Console.WriteLine("Virtual: Motorcycle");
             Console.WriteLine();
         }
     }
